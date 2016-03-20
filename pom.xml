@@ -12,4 +12,19 @@
 
     <artifactId>sqlsmith</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.libsmith</groupId>
+            <artifactId>libanvil</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>19.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
 </project>
