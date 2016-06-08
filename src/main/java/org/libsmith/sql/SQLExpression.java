@@ -7,7 +7,6 @@ import javax.annotation.Nonnull;
 import java.lang.reflect.Array;
 import java.sql.Timestamp;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
 * @author Dmitriy Balakin <dmitriy.balakin@0x0000.ru>
@@ -204,7 +203,7 @@ public class SQLExpression implements SQLFragment, SQLTemplate.KnownMeaningOfLif
             if (concatNotSet) {
                 errors.add("concat not set");
             }
-            throw new IllegalStateException(errors.stream().collect(Collectors.joining(", ")));
+            throw new IllegalStateException(String.join(", ", errors));
         }
         if (modCount == 0) {
             return;
