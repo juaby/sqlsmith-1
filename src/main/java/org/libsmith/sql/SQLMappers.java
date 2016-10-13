@@ -218,7 +218,7 @@ public abstract class SQLMappers {
 
         protected SQLValueEnumMapper(Class<T> type) {
             this.type = type;
-            this.keyClass = GenericReflection.extractGenericParameterOf(SQLValue.class).from(type);
+            this.keyClass = GenericReflection.extractParameterOf(SQLValue.class).atIndex(0).from(type);
             for (T constant : type.getEnumConstants()) {
                 this.valuesMap.put(constant.getSQLValueEntity(), constant);
             }
